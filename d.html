@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Счетчик просмотров</title>
+	
+    <script>
+           // Изначально я добавил  localStorage.setItem('number', '0'), после чего удалил
+            function myFunction() {
+                var x = Number(localStorage.getItem('numbers'))+1
+                localStorage.setItem('numbers', x.toString())
+                document.getElementById("p1").innerHTML="Эту страницу просмотрели " + x + " раз";
+            }
+    </script>
+
+</head>
+<body onload=myFunction()>
+        <p  id="p1"></p>
+</body>
+</html>
